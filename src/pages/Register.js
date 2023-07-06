@@ -1,56 +1,51 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../assets/css/register.css";
+import axios from "axios";
 
 const Register = () => {
-  const [enteredTen, setenteredTen] = useState("");
+  const [enteredFullName, setenteredFullName] = useState("");
   const [enteredUserName, setenteredUserName] = useState("");
   const [enteredTelephone, setenteredTelephone] = useState("");
   const [enteredPassword, setenteredPassword] = useState("");
 
-
-
-  const tenChangeHandler = (e) => {
-    setenteredTen(e.target.value);
-    console.log(enteredTen);
-  }
+  const fullNameChangeHandler = (e) => {
+    setenteredFullName(e.target.value);
+  };
 
   const userNameChangeHandler = (e) => {
     setenteredUserName(e.target.value);
-    console.log(enteredUserName);
-
-  }
+   
+  };
   const telephoneChangeHandler = (e) => {
     setenteredTelephone(e.target.value);
-    console.log(enteredTen);
-    
-  }
+ 
+  };
   const passwordChangeHandler = (e) => {
     setenteredPassword(e.target.value);
-    console.log(enteredTen);
-    
-  }
-  
+    console.log(enteredPassword);
+  };
+
   const submitRegisterHandler = (e) => {
     e.preventDefault();
     alert("Hello");
-    console.log(enteredUserName);
-    console.log(enteredPassword);
-    console.log(enteredTen);
-    console.log("test");
-    // const txtTen = document.getElementById("txtTen").value;
-    // const txtUserName = document.getElementById("txtUserName").value;
-    // const txtTelephone = document.getElementById("txtTelephone").value;
-    // const txtPassword = document.getElementById("txtPassword").value;
-    // console.log(txtTen);
-
-    const data = {
+    const register = {
       user_username: enteredUserName,
       user_password: enteredPassword,
-      user_full_name: enteredTen,
+      user_full_name: enteredFullName,
       user_telephone: enteredTelephone,
     };
-
-    console.log(data.typeof);
+    console.log(enteredFullName);
+    console.log(register.user_full_name);
+    axios.post("http://34.29.205.142:85/api/create-user", register)
+      .then(function (respone) {
+        console.log(respone);
+        console.log(respone.data);
+        alert("succcess");
+      })
+      .catch(function (error) {
+        console.log(error);
+        console.log(error.respone);
+      });
   };
   return (
     <>
@@ -75,12 +70,11 @@ const Register = () => {
 
                   <div class="mb-3">
                     <input
-                      id="txtTen"
                       type="text"
                       class="form-control"
                       placeholder="Tên"
-                      value={enteredTen}
-                      onChange={tenChangeHandler}
+                      value={enteredFullName}
+                      onChange={fullNameChangeHandler}
                     />
                   </div>
                   <div class="mb-3">
