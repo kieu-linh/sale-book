@@ -22,13 +22,13 @@ class HomePage extends React.Component {
                                         {/* <div className="header-right header-right d-flex justify-content-center"> */}
                                         <ul className="menu-list">
                                             <li className="li-item">
-                                                <a href="#">Thẻ quà tặng</a>
+                                                <a href="./">Thẻ quà tặng</a>
                                             </li>
                                             <li className="li-item">
-                                                <a href="#">Thành viên cửa hàng & Sự kiện</a>
+                                                <a href="./">Thành viên cửa hàng & Sự kiện</a>
                                             </li>
                                             <li className="li-item">
-                                                <a href="#">Trợ giúp</a>
+                                                <a href="./">Trợ giúp</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -39,7 +39,7 @@ class HomePage extends React.Component {
                             <div className="row">
                                 <div className="col-lg-3">
                                     <div className="logo">
-                                        <a href="#">
+                                        <a href="./">
                                             <img src={logo} alt="logo" />
                                         </a>
                                     </div>
@@ -49,13 +49,13 @@ class HomePage extends React.Component {
                                         <div className="headtop-search">
                                             <ul className="menu-list p-0">
                                                 <li className="li-item">
-                                                    <a href="#">Ưu đãi đối tác</a>
+                                                    <a href="./">Ưu đãi đối tác</a>
                                                 </li>
                                                 <li className="li-item">
-                                                    <a href="#">Phiếu quà tặng</a>
+                                                    <a href="./">Phiếu quà tặng</a>
                                                 </li>
                                                 <li className="li-item">
-                                                    <a href="#">Khuyến mãi hot</a>
+                                                    <a href="./">Khuyến mãi hot</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -69,7 +69,7 @@ class HomePage extends React.Component {
                                 </div>
                                 <div className="col-lg-3">
                                     <div className="cart">
-                                        <a href="#">
+                                        <a href="./">
                                             <img src={cart} alt="cart" />
                                         </a>
                                     </div>
