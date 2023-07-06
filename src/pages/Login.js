@@ -56,8 +56,29 @@ class Login extends React.Component {
                                 type="submit"
                                 className="btn"
                                 value="Đăng nhập"
-                                onClick={this.processLogin}
+                            // onClick={this.processLogin}
                             />
+                        </div>
+                        <div className="form-group connect d-flex ">
+                            <div className="px-3">
+                                <span className="note-title">
+                                    <a href="./">Quên tài khoản</a>
+                                </span>
+                            </div>
+                            <div className="link">
+                                <span> Hoặc đăng nhập bằng link</span>
+                                <div className="link-connect">
+                                    <a className="link-img" href="./">
+                                        <img src="https://bizweb.dktcdn.net/assets/admin/images/login/fb-btn.svg" alt="this" />
+                                    </a>
+                                    <a className="link-img" href="./">
+                                        <img src="https://bizweb.dktcdn.net/assets/admin/images/login/gp-btn.svg" alt="this" />
+                                    </a>
+
+
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

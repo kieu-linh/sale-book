@@ -2,9 +2,9 @@
     background-color: #FDFDFD;
 }
 .login-wrapper {
-    .form-signin input[type=email],
-    .form-signin input[type=password],
-    .form-signin input[type=text],
+    // .form-signin input[type=email],
+    // .form-signin input[type=password],
+    // .form-signin input[type=text],
     .form-signin button {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -15,14 +15,6 @@
         width: 100%;
         z-index: 1;
     }
-
-    // .form-signin .form-control:focus {
-    //     border-color: rgb(104, 145, 162);
-    //     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
-    //     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
-    //     outline: 0;
-    // }
-
     .login-container {
         height: 100vh;
         margin: auto 0 auto auto;
@@ -40,7 +32,8 @@
     }
 
     .form_login {
-        background: rgb(178, 217, 234);
+        // background: rgb(178, 217, 234);
+        background: #dee2e6;
         border:none;
         border-radius: 8px; -webkit-border-radius:8px;
         height: 475px;
@@ -48,9 +41,9 @@
         max-width: 470px;
         padding: 20px 50px;
         .title {
-            color: rgb(224, 235, 240);
+            color: black;
             background-color: transparent;
-            font-size: 18px;
+            font-size: 30px;
             font-weight: bold;
             line-height: 1.4;
             margin: 20px 0 20px 0;
@@ -58,7 +51,16 @@
             text-transform: uppercase;
         }
         .note-title{
-            font-size: 14px;
+            font-size: 15px;
+        }
+        .note-title a{
+            color: #00D664;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .note-title a:hover{
+            color: rgb(238, 90, 90);
+            // font-weight: 400;
         }
         .error-msg {
             color:rgb(104, 145, 162);;
@@ -88,20 +90,20 @@
             }
             .form-control{
                 background: rgb(104, 145, 162);
-                border: 1px solid rgba(0, 0, 0, 0.8);
+                border: 1px solid #ebebeb;
                 border-radius: 3px;
                 -webkit-border-radius: 3px;
                 box-sizing: border-box;
                 color: rgba(0,0,0,0.8);
-                height: 40px;
-                margin-bottom: 0;     
+                height: 45px;
+                margin-bottom: 0;  
                 &:focus, &:hover{
                     border: 3px solid rgb(104, 145, 162);;
                 }
             }
             &.icon-true {
-                .form-control {
-                    background: rgb(104, 145, 162);
+                .form-control {           
+                background: #ebebeb;
                     padding-left: 40px;
                     width: 100%;
                 }
@@ -117,20 +119,30 @@
         }
         .login{
             .btn{
-                background: rgb(104, 145, 162);;
+                text-align: center;
+                background: #00D664;;
                 color: #fff;
                 display: block;
-                font-size: 14px;
+                font-size: 15px;
                 height: 40px;
                 margin-bottom: 13px;
-                width: 100%;
-                &.dn {
-                    background: rgb(104, 145, 162);;
-                }
-                &.dk {
-                    background: rgb(104, 145, 162);;
-                }
+                width: 65%;
+                margin-left: 53px;
+                // &.dn {
+                //     background: wheat
+                // }
+                // &.dk {
+                //     background: wheat;
+                // }
             }
+        }
+        .link-img img{
+            max-width: 50%;
+            padding: 2px;
+        }
+        
+        .link-connect{
+            margin-top: 15px;
         }
     } 
 
@@ -142,13 +154,6 @@
             color: rgb(104, 145, 162);;
         }
     }
-    
-    /*=============END FOOTER==========*/
-    
-    /*=============MENU MOBILE==========*/
-    /*=============END MENU MOBILE==========*/
-    
-    /*RESPONSIVE*/
     @media screen and (min-device-width: 1280px) and (max-device-width: 2400px) {
         .login-container {
             padding: 30px 0 0 0;
@@ -159,8 +164,8 @@
             padding: 100px 0 0 0;
         }
         .form_login{
-            height: 475px;
-            max-width: 405px;
+            height: 490px;
+            max-width: 430px;
             .form-group {
                 margin-bottom: 20px;
                 margin-top: 27px;
@@ -172,8 +177,8 @@
             padding: 80px 0 0 0;
         }
         .form_login{
-            height: 475px;
-            max-width: 405px;
+            height: 490px;
+            max-width: 430px;
             .form-group {
                 margin-bottom: 20px;
                 margin-top: 27px;
@@ -182,8 +187,8 @@
     }
     @media (max-width: 1380px){
         .form_login{
-            height: 475px;
-            max-width: 405px;
+            height: 490px;
+            max-width: 430px;
             .form-group {
                 margin-bottom: 20px;
                 margin-top: 27px;
@@ -195,8 +200,8 @@
             padding: 30px 0 0 0;
         }
         .form_login{
-            height: 475px;
-            max-width: 405px;
+            height: 490px;
+            max-width: 430px;
             .form-group {
                 margin-bottom: 20px;
                 margin-top: 27px;
