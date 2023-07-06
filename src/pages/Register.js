@@ -4,6 +4,7 @@ import "../assets/css/register.css";
 const Register = () => {
   const submitLoginHandler = (e) => {
     e.preventDefault();
+    
   };
   return (
     <>
@@ -28,6 +29,7 @@ const Register = () => {
                       type="password"
                       class="form-control"
                       placeholder="Tên"
+                      required
                     />
                   </div>
                   <div class="mb-3">
@@ -35,6 +37,7 @@ const Register = () => {
                       type="email"
                       class="form-control"
                       placeholder="Email"
+                      required
                     />
                   </div>
                   <div class="mb-3">
@@ -42,6 +45,7 @@ const Register = () => {
                       type="text"
                       class="form-control"
                       placeholder="Số điện thoại"
+                      required
                     />
                   </div>
 
@@ -50,6 +54,7 @@ const Register = () => {
                       type="password"
                       class="form-control"
                       placeholder="Mật khẩu"
+                      required
                     />
                   </div>
                   <div class="btn-register">

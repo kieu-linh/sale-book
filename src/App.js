@@ -9,8 +9,8 @@ function App() {
   // đang cấu hinh router
   const router = createBrowserRouter([{ path: "", element: "" }]);
   return (
-    <Register />
-    // <Login />
+    // <Register />
+    <Login />
     // <HomePage />
   );
 }
