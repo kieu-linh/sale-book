@@ -5,46 +5,35 @@ import 'bootstrap/dist/css/bootstrap.css';
 const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
-        const txtUsername = document.getElementById("user_username").value;
-        const txtPassword = document.getElementById("user_password").value;
-        const account = {
-            user_username: txtUsername,
-            user_password: txtPassword
-        };
-        console.log(account);
-        fetch('http://34.29.205.142:85/api/get-user', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            // Send your data in the request body as JSON
-            body: JSON.stringify(account)
-        }).then(res => {
-            if (res.ok) {
-
-                return res.json();
-            }
-            // handle error
-        }).then(data => {
-            console.log(data);
-            //kiem tra data có tồn tại hay không
-            if (data.length > 0) {
-                for (let i = 0; i < data.length; i++) {
-                    if (data[i].user_username === txtUsername && data[i].user_password === txtPassword) {
-                        alert("Đăng nhập thành công");
-                        //lưu vào local storage
-                        localStorage.setItem('user', JSON.stringify(data[i]));
-                        //chuyển hướng
-                        // window.location.href = "./";
-                    }
-                }
-                alert("Đăng nhập thất bại");
-            }
-
-            // do something with the new task
-        }).catch(error => {
-            console.error(error);
-
-            // handle error
-        })
+        
+        // fetch('https://64a6346f00c3559aa9c0766f.mockapi.io/account/v1/user', {
+        //     method: 'GET',
+        //     headers: { 'content-type': 'application/json' },
+        // }).then(res => {
+        //     if (res.ok) {
+        //         return res.json();
+        //     }
+        // }).then(data => {
+        //     console.log(data);
+        //     if (data.length > 0) {
+        //         for (let i = 0; i < data.length; i++) {
+        //             if (data[i].username === document.getElementById("username").value && data[i].password === document.getElementById("password").value) {
+        //                 alert("Đăng nhập thành công với " + data[i].username);
+        //                 console.log(data[i]);
+        //                 //lưu vào local storage
+        //                 localStorage.setItem('user', JSON.stringify(data[i]));
+        //                 //chuyển hướng
+        //                 // window.location.href = "./";
+        //                 return;
+        //             }
+        //         }
+        //         alert("Đăng nhập thất bại");
+        //     }
+        //     // Do something with the list of tasks
+        // }).catch(error => {
+        //     console.error(error);
+        //     // handle error
+        // })
     }
     return (
         <div className="login-wrapper">
@@ -61,7 +50,7 @@ const Login = () => {
                         <input
                             //placeholder={LanguageUtils.getMessageByKey("login.username", lang)}
                             placeholder="Tên đăng nhập"
-                            id="user_username"
+                            id="username"
                             name="username"
                             type="text"
                             className="form-control"
@@ -76,7 +65,7 @@ const Login = () => {
                         <input
                             // placeholder={LanguageUtils.getMessageByKey("login.password", lang)}
                             placeholder="Mật khẩu"
-                            id="user_password"
+                            id="password"
                             name="password"
                             type="password"
                             className="form-control"
