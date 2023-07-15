@@ -1,36 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import '../styles/Login.scss';
 import 'bootstrap/dist/css/bootstrap.css';
-import axios from 'axios';
 
 const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
-        const Login = {
-            user_username: event.target.username.value,
-            user_password: event.target.password.value,
-        };
-        console.log(Login);
-        axios.post("http://34.29.205.142:85/api/get-user", Login)
-            .then(function (respone) {
-                console.log(respone);
-                console.log(respone.data);
-                alert("succcess");
-            })
-            .catch(function (error) {
-                console.log(error);
-                console.log(error.respone);
-            });
-        if (Login.user_username === document.getElementById("user_username").value && Login.user_password === document.getElementById("user_password").value) {
-            alert("Đăng nhập thành công"   );
-            // window.location.href = "./";
-            //luu vao localstorage
-            localStorage.setItem("user_username", Login.user_username);
-            localStorage.setItem("user_password", Login.user_password);
-        } else {
-            alert("Đăng nhập thất bại");
-        }
-    };
+        
+        // fetch('https://64a6346f00c3559aa9c0766f.mockapi.io/account/v1/user', {
+        //     method: 'GET',
+        //     headers: { 'content-type': 'application/json' },
+        // }).then(res => {
+        //     if (res.ok) {
+        //         return res.json();
+        //     }
+        // }).then(data => {
+        //     console.log(data);
+        //     if (data.length > 0) {
+        //         for (let i = 0; i < data.length; i++) {
+        //             if (data[i].username === document.getElementById("username").value && data[i].password === document.getElementById("password").value) {
+        //                 alert("Đăng nhập thành công với " + data[i].username);
+        //                 console.log(data[i]);
+        //                 //lưu vào local storage
+        //                 localStorage.setItem('user', JSON.stringify(data[i]));
+        //                 //chuyển hướng
+        //                 // window.location.href = "./";
+        //                 return;
+        //             }
+        //         }
+        //         alert("Đăng nhập thất bại");
+        //     }
+        //     // Do something with the list of tasks
+        // }).catch(error => {
+        //     console.error(error);
+        //     // handle error
+        // })
+    }
     return (
         <div className="login-wrapper">
             <div className="login-container">
@@ -42,32 +46,52 @@ const Login = () => {
                         Nếu bạn chưa có tài khoản hãy <a href="./">đăng ký tại đây</a>
                     </span>
                     <div className="form-group icon-true">
+                        {/* <img className="icon" alt="this" /> */}
                         <input
+                            //placeholder={LanguageUtils.getMessageByKey("login.username", lang)}
                             placeholder="Tên đăng nhập"
-                            id="user_username"
+                            id="username"
                             name="username"
                             type="text"
                             className="form-control"
                             required
+                        // value="Linh"
+                        // onChange={this.onUsernameChange}
                         />
                     </div>
 
                     <div id="phone-input-container" className="form-group icon-true">
+                        {/* <img className="icon" alt="this" /> */}
                         <input
+                            // placeholder={LanguageUtils.getMessageByKey("login.password", lang)}
                             placeholder="Mật khẩu"
-                            id="user_password"
+                            id="password"
                             name="password"
                             type="password"
                             className="form-control"
                             required
+                        // value="123456"
+                        // onChange={this.onPasswordChange}
                         />
                     </div>
+
+                    {/* {loginError !== '' && (
+                        <div className='login-error'>
+                            <span className='login-error-message'>{loginError}</span>
+                        </div>
+                    )} */}
+
                     <div className="form-group login">
                         <button
+                            // ref={this.btnLogin}
                             id="btnLogin"
                             type="submit"
                             className="btn"
                             value="Đăng nhập"
+
+
+                        // onClick={this.processLogin}
+
                         > Đăng nhập
                         </button>
                     </div>
