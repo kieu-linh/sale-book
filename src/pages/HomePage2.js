@@ -13,7 +13,7 @@ const Home2 = () => {
     <>
     <div className='wrapper-banner'>
       <BookOutStanding/>
-      <BookSelling/>
+      {/* <BookSelling/> */}
       {/* <BookNew/>
       <BookDifference/> */}
     </div>
