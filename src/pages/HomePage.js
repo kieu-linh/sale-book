@@ -3,6 +3,7 @@ import '../styles/HomePage.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import logo from '../assets/images/logo1.png';
 import cart from '../assets/images/icon_hovercart.webp';
+import Test from '../components/test';
 
 class HomePage extends React.Component {
     render() {
@@ -79,7 +80,7 @@ class HomePage extends React.Component {
                         <div></div>
                     </div>
                 </div>
-
+                <Test />
             </div>
         );
     }

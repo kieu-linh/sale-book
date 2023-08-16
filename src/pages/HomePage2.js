@@ -3,8 +3,8 @@ import React from 'react';
 // import Categories from '../components/Categories';
 import BookOutStanding from '../components/BookNew';
 import BookSelling from '../components/BookSelling';
-// import BookNew from '.../components/BookNew';
-// import BookDifference from '.../components/BookDifference';
+import BookNew from '../components/BookNew';
+import BookDifference from '../components/BookDifference';
 
 
 
@@ -12,10 +12,10 @@ const Home2 = () => {
   return (
     <>
     <div className='wrapper-banner'>
-      <BookOutStanding/>
-      {/* <BookSelling/> */}
-      {/* <BookNew/>
-      <BookDifference/> */}
+      <BookOutStanding/> 
+      <BookSelling/> 
+       <BookNew/>
+      <BookDifference/>
     </div>
     
    
